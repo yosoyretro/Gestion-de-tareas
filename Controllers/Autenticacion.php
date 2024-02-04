@@ -24,7 +24,7 @@ try {
                 } else {
                     $_SESSION["login"]["mensaje"] = $autenticacion["mensaje"];
                 }
-                header("Location: ../");
+                header("Location: ../index.php");
             }
         }
     } else {

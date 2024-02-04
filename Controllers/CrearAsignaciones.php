@@ -14,4 +14,8 @@ $response = $obj->createTarea($nombre_tarea,$descripcion,$fecha_termina,intval($
 // var_dump($response);
 //var_dump($response["id_tarea"]);
 $response_asignacion = $obj_asignacion->createAsignacion($_SESSION["login"][0]["data"]["id"],$id_usuario,$response["id_tarea"]);
+$_SESSION["modulo_asignacion"]["mensaje"] = $response_asignacion["mensaje"];
+$_SESSION["modulo_asignacion"]["green"] = $response_asignacion["mensaje"];
+$_SESSION["modulo_asignacion"]["timestamp"] = time();
+
 header("Location: ../Asignaciones/index.php");
